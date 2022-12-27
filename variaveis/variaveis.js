@@ -1,6 +1,6 @@
 
 
-var nome = "Roberta";
+let nome = "Roberta";
 var idade = 33;
 var comidaFavorita;
 var comidaFavorita = "Moqueca";
@@ -10,3 +10,5 @@ var carroDeCorrida;
     diaDaSemana;
     pokemonFavorito;
     RadioButtonUnchecked;
+
+console.log(idade);
