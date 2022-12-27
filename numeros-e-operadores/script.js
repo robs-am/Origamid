@@ -2,40 +2,56 @@
 
 
 
-//template strings: concatenan strings com expressões javascripts
+var soma = '100' + 50; // 10050
+var subtracao = '100' - 50; // 50  
+//existe subtração de numero e string, mas não soma dos mesmos
+var multiplicacao = '100' * '2'; // 200
+var divisao = 'Comprei 10' / 2; // NaN (Not a Number)
 
-var gols = 1000;
-// var frase = 'Romário fez ' + gols + ' gols';
-var frase2 = `Romário fez ${gols * 2}`
+var x = 5
+console.log(x)
+console.log(x++); // x = x + 1
+console.log(x)
+console.log(++x);
+console.log(x)
 
-console.log(frase2);
+//OPERADORES ARITMÉTICOS UNÁRIOS
+//O + e - tenta transformar o valor seguinte em número
 
-// Declare uma variável contendo uma string
+var frase = 'Isso é um teste';
++frase; // NaN
+-frase; // NaN
 
-var string = "Uma frase interessante"
+var idade = '28';
++idade; // 28 (número)
+-idade; // -28 (número)
+console.log(+idade + 5); // 33 
 
-// Declare uma variável contendo um número dentro de uma string
- var numeroString = "Eu tenho" + 33 + "anos"
+var possuiFaculdade = true;
+console.log(+possuiFaculdade); // 1
 
-// Declare uma variável com a sua idade
+// Qual o resultado da seguinte expressão?
+var total = 10 + 5 * 2 / 2 + 20;
+console.log(total)
 
-var minhaIdade = 33
-
-// Declare duas variáveis, uma com seu nome
-// e outra com seu sobrenome e some as mesmas
-
-var meuNome = "Roberta"
-var meuSobreNome = "Amaro"
-var nomeCompleto = meuNome + meuSobreNome //ou
-var nomeCompleto = `${meuNome} ${meuSobreNome}` 
+// Crie duas expressões que retornem NaN
+var nan1 = 'roberta' / 2
+console.log(nan1)
 
 
-console.log(nomeCompleto)
+// Somar a string '200' com o número 50 e retornar 250
 
-// Coloque a seguinte frase em uma variável: It's time
+var soma = +'200' + 50
+console.log(soma)
+// Incremente o número 5 e retorne o seu valor incrementado
+var x = 5
+console.log(++x)
 
-var agora = "It's time"
 
-// Verifique o tipo da variável que contém o seu nome
-var nome = "Roberta"
-console.log(typeof nome)
+// Como dividir o peso por 2?
+var numero = +'80'/2;
+var unidade = 'kg';
+var peso = numero + unidade; // '80kg'
+
+
+console.log(peso)
