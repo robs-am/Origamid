@@ -18,9 +18,9 @@ function corFavorita(cor) {
   }
 }
 
-addEventListener("click", function () {
+/* addEventListener("click", function () {
   console.log("Oi");
-});
+}); */
 
 // A função possui dois argumentos
 // Primeiro é a string 'click' que significa quando o usuário clica em algo
@@ -57,11 +57,11 @@ console.log(terceiraIdade(35));
 
 //Cuidado, retornar diferentes tipos de dados na mesma função não é uma boa ideia.
 
-function precisoVisitar(paisesVisitados) {
+/* function precisoVisitar(paisesVisitados) {
   var totalPaises = 193;
   return `Ainda faltam ${totalPaises - paisesVisitados} paises para visitar`; //template string faz com que voce nao precise escrever uma constante
 }
-console.log(totalPaises); // erro, totalPaises não definido, pq a variavel esta dentro da função, ela precisa estar fora do escopo da função
+console.log(totalPaises); */ // erro, totalPaises não definido, pq a variavel esta dentro da função, ela precisa estar fora do escopo da função
 
 //ESCOPO LÉXICO//
 
@@ -134,18 +134,36 @@ Par();
 // Crie uma função que retorne o tipo de
 // dado do argumento passado nela (typeof)
 
+function tipoDado(dado) {
+  return typeof dado;
+}
+
+tipoDado();
+
 // addEventListener é uma função nativa do JavaScript
 // o primeiro parâmetro é o evento que ocorre e o segundo o Callback
 // utilize essa função para mostrar no console o seu nome completo
 // quando o evento 'scroll' ocorrer.
 
+addEventListener("click", function () {
+  console.log("Roberta Amaro");
+});
+
 // Corrija o erro abaixo
-function precisoVisitar(paisesVisitados) {
-  var totalPaises = 193;
-  return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
+
+function precisoVisitar(paisesVisitados, totalPaises) {
+  //var totalPaises = 193;
+  const total = totalPaises - paisesVisitados;
+  return `Ainda faltam ${total} países para visitar`;
 }
-function jaVisitei(paisesVisitados) {
-  return `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
+function jaVisitei(paisesVisitados, totalPaises) {
+  const frase = `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
+
+  return frase;
 }
-precisoVisitar(20);
-jaVisitei(20);
+precisoVisitar(20, 193);
+jaVisitei(20, 193);
+
+/* addEventListener('click',function () {
+console.log ('André Rafael');
+});  */
