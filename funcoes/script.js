@@ -75,12 +75,77 @@ function dados() {
     var idade = 29;
     return `${nome}, ${idade}, ${endereco}, ${profissao}`;
   }
-  return outrosDados();
+  return outrosDados(); //aqui vai funcionar pois o return esta dentro do escopo da função
 }
 
 dados(); // Retorna 'André, 29, Rio de Janeiro, Designer'
 //Retorna este resultado, pois a função 'dados' retorna a função outrosDados
 
-outrosDados(); // retorna um erro
+outrosDados(); // retorna um erro pois a chamada da função esta fora do escopo
 
 //
+
+//EXERCÍCIO//
+
+// Crie uma função para verificar se um valor é Truthy
+
+function verificaTruthy(dado) {
+  return !!dado;
+}
+
+verificaTruthy();
+
+// Crie uma função matemática que retorne o perímetro de um quadrado
+// lembrando: perímetro é a soma dos quatro lados do quadrado
+
+function perimetroQuadrado(lado) {
+  return lado * 4;
+}
+
+perimetroQuadrado();
+
+// Crie uma função que retorne o seu nome completo
+// ela deve possuir os parâmetros: nome e sobrenome
+
+function nomeSobrenome(nome, sobrenome) {
+  return `${nome}` + " " + `${sobrenome}`;
+}
+
+nomeSobrenome();
+
+//parametros: nome, sobrenome
+//argumento: 'Roberta', 'Amaro'
+//chamar o argumento na chamada da função: nomeSobrenome('Roberta', 'Amaro')
+
+// Crie uma função que verifica se um número é par
+
+function Par(numero) {
+  var modulo = numero % 2;
+
+  if (modulo === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+Par();
+
+// Crie uma função que retorne o tipo de
+// dado do argumento passado nela (typeof)
+
+// addEventListener é uma função nativa do JavaScript
+// o primeiro parâmetro é o evento que ocorre e o segundo o Callback
+// utilize essa função para mostrar no console o seu nome completo
+// quando o evento 'scroll' ocorrer.
+
+// Corrija o erro abaixo
+function precisoVisitar(paisesVisitados) {
+  var totalPaises = 193;
+  return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
+}
+function jaVisitei(paisesVisitados) {
+  return `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
+}
+precisoVisitar(20);
+jaVisitei(20);
