@@ -151,13 +151,13 @@ addEventListener("click", function () {
 
 // Corrija o erro abaixo
 
-function precisoVisitar(paisesVisitados, totalPaises) {
-  //var totalPaises = 193;
-  const total = totalPaises - paisesVisitados;
+var totalPaises = 193;
+function precisoVisitar(paisesVisitados, totalP) {
+  const total = totalP - paisesVisitados;
   return `Ainda faltam ${total} países para visitar`;
 }
-function jaVisitei(paisesVisitados, totalPaises) {
-  const frase = `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
+function jaVisitei(paisesVisitados, totalP) {
+  const frase = `Já visitei ${paisesVisitados} do total de ${totalP} países`;
 
   return frase;
 }
