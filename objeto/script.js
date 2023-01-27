@@ -2,9 +2,13 @@ var pessoa = {
   nome: "Luiz", //nome = chave, Luiz = valor
   idade: 65,
 };
-//pessoa é o objeto e o que esta contido dentro das chaves são as propriedades. As propiedades são compostas por nome (chave) e valor
+//objeto = var pessoa
+//propriedade = chave(ex.: nome) + valor (ex.: "Luiz)"
+// propriedade é tudo que esta contido dentro das chaves
 
-//metodos
+//Acessando o valor da propriedade: objeto.chave ex.: pessoa.nome = "Luiz"
+
+//METODOS//
 
 //É uma propriedade que possui uma função no local do seu valor.
 
