@@ -19,12 +19,30 @@ var quadrado = {
 
     return lado * lado;
   },
+
   perimetro: function (lado) {
-    console.log(quadrado);
-    return lado * lado; //a paalavra reservada this em js, se refere no caso, ao objeto em si (lados), para nao ter que repetir a variavel lados
+    return this.lados * lado; //this é uma palavra reservada que se refere a 'isso', no caso de um objeto, ele irá se referir ao proprio objeto em si
   },
 };
 
 quadrado.lados; // 4
-console.log(quadrado.area(5)); // 25
+quadrado.area(5); // 25
 quadrado.perimetro(5); // 20
+
+//quadrado = objeto
+//lados = propriedade
+//area e perimetro: metodos
+
+/* 
+ex.: console.log -> sempre que tiver um ponto, o que está antes dele é um objeto. E Log é um método, pois está executando uma função */
+
+var menu = {
+  width: 100,
+  height: 100,
+  backgroundColor: "#856",
+  color: blue,
+};
+
+var backgroundColor = menu.backgroundColor;
+
+//pode-se criar variáveis e acessar valores de outra variavel usando
