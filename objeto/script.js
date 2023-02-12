@@ -91,7 +91,7 @@ carro.preco = 800;
 // Crie um objeto de um cachorro que represente um labrador,
 // preto com 10 anos, que late ao ver um homem
  var cachorro ={
-  raça: 'labrador', 'maria',
+  raça: ['labrador', 'maria'],
   cor: '#000',
   idade:10,
   lateQuandoHomemPssa: true
