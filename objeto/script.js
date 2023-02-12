@@ -94,5 +94,5 @@ carro.preco = 800;
   raça: ['labrador', 'maria'],
   cor: '#000',
   idade:10,
-  lateQuandoHomemPssa: true
+  lateQuandoHomemPassa: true
  }
