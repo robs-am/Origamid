@@ -37,12 +37,15 @@ quadrado.perimetro(5); // 20
 ex.: console.log -> sempre que tiver um ponto, o que está antes dele é um objeto. E Log é um método, pois está executando uma função */
 
 var menu = {
-  width: 100,
-  height: 100,
-  backgroundColor: "#856",
-  color: blue,
-};
+  width: 800,
+  height: 50,
+  metadeHeight() {
+    return this.height / 2;
+  }
+}
 
-var backgroundColor = menu.backgroundColor;
+menu.height
+
+var backgroundColor = menu.backgroundColor; //transforma a propriedade backGroudnColor em uma variável a parte
 
 //pode-se criar variáveis e acessar valores de outra variavel usando
