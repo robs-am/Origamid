@@ -67,12 +67,18 @@ var backgroundColor = menu.backgroundColor; //transforma a propriedade backGroud
 var eu = {
   nome: "Roberta",
   sobrenome: "Amaro",
-  idade: "33",
-  cidade: "Rio de Janeiro",
+
   nomeCompleto() {
-    return this.nome + this.cidade
+    return eu.nome + eu.sobrenome
   }
 }
+
+//outra form de escrever
+
+eu.nomeCompleto = function () {
+  return this.nome + this.sobrenome
+}
+//this esta represetntando o objeto eu
 // Deve possui pelo menos duas propriedades nome e sobrenome
 
 // Crie um método no objeto anterior, que mostre o seu nome completo
@@ -86,13 +92,21 @@ var carro = {
   marca: 'Audi',
 }
 
-carro.preco = 800;
+carro.preco = 3000;
 
 // Crie um objeto de um cachorro que represente um labrador,
 // preto com 10 anos, que late ao ver um homem
- var cachorro ={
+var cachorro = {
   raça: ['labrador', 'maria'],
   cor: '#000',
-  idade:10,
-  lateQuandoHomemPassa: true
- }
+  idade: 10,
+  latir(pessoa) {       //precisa-se aplicar uma condição com o parametro pessoa, onde com o argumento homem ele latira, e qualquer outro argumento não ocorre nada
+    if (pessoa === 'homem') {
+      return "irá latir"
+    }
+    else {
+      return 
+    }
+  }
+
+} 
