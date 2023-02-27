@@ -19,3 +19,31 @@ areaQuadrado.toString();
 areaQuadrado.length; // 1
 
 // --. retorna o número de argumentos que existe dentro da função
+
+var btn = document.querySelector(".btn");
+
+// --> variavel, document = objeto, querySelector = método
+
+//ELEMENTOS DO DOM
+
+var btn = document.querySelector(".btn");
+
+btn.classList.add("azul"); // adiciona a classe azul
+btn.innerText; // 'Clique'
+btn.addEventListener("click", function () {
+  console.log("Clicou");
+});
+
+//Exercício
+
+// nomeie 3 propriedades ou métodos de strings
+
+var estado = "Rio de Janeiro";
+
+estado.length;
+estado.toLowerCase();
+
+// nomeie 5 propriedades ou métodos de elementos do DOM
+
+// busque na web um objeto (método) capaz de interagir com o clipboard,
+// clipboard é a parte do seu computador que lida com o CTRL + C e CTRL + V
