@@ -2,6 +2,8 @@ var pessoa = {
   nome: "Luiz", //nome = chave, Luiz = valor
   idade: 65,
 };
+
+pessoa.nome
 //objeto = var pessoa
 //propriedade = chave(ex.: nome) + valor (ex.: "Luiz)"
 // propriedade é tudo que esta contido dentro das chaves
@@ -19,12 +21,92 @@ var quadrado = {
 
     return lado * lado;
   },
+
   perimetro: function (lado) {
-    console.log(quadrado);
-    return lado * lado; //a paalavra reservada this em js, se refere no caso, ao objeto em si (lados), para nao ter que repetir a variavel lados
+    return this.lados * lado; //this é uma palavra reservada que se refere a 'isso', no caso de um objeto, ele irá se referir ao proprio objeto em si
   },
 };
 
 quadrado.lados; // 4
-console.log(quadrado.area(5)); // 25
+quadrado.area(5); // 25
 quadrado.perimetro(5); // 20
+
+//quadrado = objeto
+//lados = propriedade
+//area e perimetro: metodos
+
+/* 
+ex.: console.log -> sempre que tiver um ponto, o que está antes dele é um objeto. E Log é um método, pois está executando uma função */
+
+var height = 120;
+var menu = {
+  width: 800,
+  height: 50,
+  metadeHeight() {
+    return this.height / 2; //o this vai se referir ao height do objeto menu. se retirarmos o this ele se referira ao height do escopo global, no caso 120
+
+  }
+
+
+}
+
+menu.metadeHeight(); // 25
+// sem o this, seria 60
+
+
+
+
+var backgroundColor = menu.backgroundColor; //transforma a propriedade backGroudnColor em uma variável a parte
+
+//pode-se criar variáveis e acessar valores de outra variavel usando
+
+
+//EXERCÍCIO//
+
+// Crie um objeto com os seus dados pessoais
+var eu = {
+  nome: "Roberta",
+  sobrenome: "Amaro",
+
+  nomeCompleto() {
+    return eu.nome + eu.sobrenome
+  }
+}
+
+//outra form de escrever
+
+eu.nomeCompleto = function () {
+  return this.nome + this.sobrenome
+}
+//this esta represetntando o objeto eu
+// Deve possui pelo menos duas propriedades nome e sobrenome
+
+// Crie um método no objeto anterior, que mostre o seu nome completo
+
+
+// Modifique o valor da propriedade preco para 3000
+
+var carro = {
+  preco: 1000,
+  portas: 4,
+  marca: 'Audi',
+}
+
+carro.preco = 3000;
+
+// Crie um objeto de um cachorro que represente um labrador,
+// preto com 10 anos, que late ao ver um homem
+var cachorro = {
+  raça: ['labrador', 'maria'],
+  cor: '#000',
+  idade: 10,
+  latir(pessoa) {       //precisa-se aplicar uma condição com o parametro pessoa, onde com o argumento homem ele latira, e qualquer outro argumento não ocorre nada
+    if (pessoa === 'homem') {
+      return "irá latir"
+    }
+    else {
+      return 
+    }
+  }
+
+} 
