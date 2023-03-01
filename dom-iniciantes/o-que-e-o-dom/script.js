@@ -52,4 +52,4 @@ document.querySelector(".ativo");
 const linguagem = window.navigator.language;
 
 // Retorne a largura da janela
-const alturaJanela = window.innerHeight;
+const lsrguraJanela = window.innerWidth;
