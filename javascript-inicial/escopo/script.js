@@ -32,7 +32,7 @@ function somarDois(x) {
   return x + dois;
 }
 function dividirDois(x) {
-  return x + dois;
+  return x / dois;
 }
 somarDois(4);
 dividirDois(6); */
