@@ -14,11 +14,22 @@
 //É uma boa pratica separar a função do eventListener a qual ela será chamada
 //a fim de ser mais facil depois para debugar o código
 
-const animaisLista = document.querySelector(".animais-lista");
+//const animaisLista = document.querySelector(".animais-lista");
 
-function callbackLista(event) {
+/* function callbackLista(event) {
   console.log(event.target); //pega exatamente onde ocorreu o click
   console.log(event.currentTarget); //pega toda a selção do querySelector
 }
 
-animaisLista.addEventListener("click", callbackLista);
+animaisLista.addEventListener("click", callbackLista); */
+
+const linkExterno = document.querySelector('a[href^="http"]');
+
+function linkExternoHandle(event) {
+  event.preventDefault();
+  console.log(event);
+}
+
+linkExterno.addEventListener("click", linkExternoHandle);
+
+//usado para prevenir o padrão esperado, no caso como esta selecionado o href, o clique não dara abrir uma pagina externa
