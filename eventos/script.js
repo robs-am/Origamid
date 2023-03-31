@@ -146,7 +146,7 @@ imgs.forEach((img) => {
 // demais itens caso eles possuam a mesma. Previna
 // o comportamento padrão desses links
 
-const linksInternos = document.querySelectorAll('a[href^="#"]');
+/* const linksInternos = document.querySelectorAll('a[href^="#"]');
 
 function handleClick(event) {
   event.preventDefault();
@@ -159,21 +159,29 @@ function handleClick(event) {
 
 linksInternos.forEach((link) => {
   link.addEventListener("click", handleClick);
-});
+}); */
 
 // Selecione todos os elementos do site começando a partir do body,
 // ao clique mostre exatamente quais elementos estão sendo clicados
 
 const elementosPagina = document.querySelectorAll("body *");
 
-function handleBody(event) {
-  event.preventDefault();
-  this.getAttribute();
+function handleElement(event) {
+  console.log(event.currentTarget);
 }
 
-elementosPagina.addEventListener("click", handleBody);
+elementosPagina.forEach((elementos) => {
+  elementos.addEventListener("click", handleElement);
+}); //para cada elemento adicionamos o evento clique que executará a função handleElement responsável por mostrar o atributo de cada um deles
 
 // Utilizando o código anterior, ao invés de mostrar no console,
 // remova o elemento que está sendo clicado, o método remove() remove um elemento
+
+function handleElement(event) {
+  console.log(event.currentTarget.remove());
+}
+
+//substituindo a função por essa, removemos todos os elementis clicados pelo
+//currentTarget
 
 // Se o usuário clicar na tecla (t), aumente todo o texto do site.
