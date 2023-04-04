@@ -23,16 +23,22 @@ console.log(h1.innerHTML); */
 //exercícios
 
 // Duplique o menu e adicione ele em copy
-const menu = document.querySelector(".menu");
+// const menu = document.querySelector(".menu");
 
-const cloneMenu = menu.cloneNode(true); //clonará o menu
-console.log(menu);
-const faq = document.querySelector(".faq");
+// const cloneMenu = menu.cloneNode(true); //clonará o menu
+// console.log(menu);
+// const faq = document.querySelector(".faq");
 
-faq.appendChild(cloneMenu); //colocará o menu após o primeiro filho do faq
+// faq.appendChild(cloneMenu); //colocará o menu após o primeiro filho do faq
 
 // Selecione o primeiro DT da dl de Faq
+const faqLista = document.querySelector(".faq-lista"); //seleciona classe da dl faq
+
+const primeiroDT = faqLista.children[0]; //seleciona primeiro filho da dl faq-lista
+// console.log(primeiroDT);
 
 // Selecione o DD referente ao primeiro DT
+DDreferente = primeiroDT.nextElementSibling;
+console.log(DDreferente.remove()); //remove a DD, para fins de confirmação
 
 // Substitua o conteúdo html de .faq pelo de .animais
