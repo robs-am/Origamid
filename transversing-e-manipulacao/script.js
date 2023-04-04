@@ -27,7 +27,7 @@ console.log(h1.innerHTML); */
 
 // const cloneMenu = menu.cloneNode(true); //clonará o menu
 // console.log(menu);
-// const faq = document.querySelector(".faq");
+const faq = document.querySelector(".faq");
 
 // faq.appendChild(cloneMenu); //colocará o menu após o primeiro filho do faq
 
@@ -42,3 +42,6 @@ DDreferente = primeiroDT.nextElementSibling;
 console.log(DDreferente.remove()); //remove a DD, para fins de confirmação
 
 // Substitua o conteúdo html de .faq pelo de .animais
+const animais = document.querySelector(".animais");
+
+faq.innerHTML = animais.innerHTML;

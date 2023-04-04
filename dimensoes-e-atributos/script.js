@@ -1,4 +1,4 @@
-//ECERCICIOS
+//EXERCICIOS
 
 // Verifique a distância da primeira imagem
 // em relação ao topo da página
