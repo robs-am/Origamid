@@ -218,3 +218,26 @@ body {
     margin-bottom: 0px;
   }
 }
+
+/* CSS responsavel para mostrar e esconder a seção de 
+acordo com o clique na imagem */
+
+.js-tabcontent section {
+  display: none;
+}
+
+.js-tabcontent section.ativo {
+  display: block !important;
+  animation: show 0.5s forwards; /* //forwards -> animação volta para o estado inicial */
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
