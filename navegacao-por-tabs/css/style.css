@@ -104,6 +104,10 @@ body {
   grid-column: 2;
 }
 
+.animais-lista li {
+  cursor: pointer;
+}
+
 .animais-lista::-webkit-scrollbar {
   width: 18px;
 }
@@ -236,8 +240,8 @@ acordo com o clique na imagem */
     opacity: 0;
     transform: translate3d(-30px, 0, 0);
   }
-  from {
+  to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(10px, 0, 0);
   }
 }

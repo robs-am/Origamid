@@ -1,6 +1,7 @@
 //seleciona as classes especificas criadas para a navegação
 const tabMenu = document.querySelectorAll(".js-tabmenu li");
 const tabContent = document.querySelectorAll(".js-tabcontent section");
+tabContent[0].classList.add("ativo");
 
 //cria a função responsável por adicionar a classe ativo na seção passada no parametro index e removê-la
 //das seções não selecionadas pelo index
