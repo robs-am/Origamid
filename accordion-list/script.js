@@ -27,17 +27,22 @@ function initTab() {
 }
 initTab();
 
-const accordionList = document.querySelectorAll(".js-accordion dt");
-accordionList[0].classList.add("ativo");
+function initAccordion() {
+  const accordionList = document.querySelectorAll(".js-accordion dt");
+  accordionList[0].classList.add("ativo");
+  accordionList[0].nextElementSibling.classList.add("ativo");
 
-//função que adiciona a classe ativo, responsável por mostrar/esconder
-function activeAccordion(event) {
-  this.classList.toggle("ativo");
-  this.nextElementSibling.classList.toggle("ativo");
+  //função que adiciona a classe ativo, responsável por mostrar/esconder
+  function activeAccordion(event) {
+    this.classList.toggle("ativo");
+    this.nextElementSibling.classList.toggle("ativo");
+  }
+
+  //substituimos o currentTaregt por this porque se referencia o item do forEach
+
+  accordionList.forEach((item) => {
+    item.addEventListener("click", activeAccordion);
+  });
 }
 
-//substituimos o currentTaregt por this porque se referencia o item do forEach
-
-accordionList.forEach((item) => {
-  item.addEventListener("click", activeAccordion);
-});
+initAccordion();
