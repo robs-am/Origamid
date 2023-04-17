@@ -31,7 +31,8 @@ const accordionList = document.querySelectorAll(".js-accordion dt");
 console.log(accordionList);
 
 function activeAccordion(event) {
-  console.log(this);
+  this.classList.add("ativo");
+  this.nextElementSibling.classList.add("ativo");
 }
 
 //substituimos o currentTaregt por this porque se referencia o item do forEach

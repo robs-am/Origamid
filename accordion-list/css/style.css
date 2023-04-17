@@ -245,3 +245,17 @@ acordo com o clique na imagem */
     transform: translate3d(10px, 0, 0);
   }
 }
+
+.js-accordion dd {
+  display: none;
+}
+
+.js-accordion dt::after {
+  content: "↴";
+  margin-left: 20px;
+}
+.js-accordion dt.ativo::after {
+  content: "↰";
+  transform: rotate(180deg);
+  margin-left: 20px;
+}
