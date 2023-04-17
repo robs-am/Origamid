@@ -28,8 +28,9 @@ function initTab() {
 initTab();
 
 const accordionList = document.querySelectorAll(".js-accordion dt");
-console.log(accordionList);
+accordionList[0].classList.add("ativo");
 
+//função que adiciona a classe ativo, responsável por mostrar/esconder
 function activeAccordion(event) {
   this.classList.toggle("ativo");
   this.nextElementSibling.classList.toggle("ativo");
