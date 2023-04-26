@@ -47,3 +47,17 @@ function initAccordion() {
 }
 
 initAccordion();
+
+//adiciona classe js-menu ao nav e seleciona os links internos, nesse caso todos que tem a #
+const linksInternos = document.querySelectorAll(".js-menu a[href^='#']");
+
+//adicionamos então um evento para cada item, utilizamos o forEach
+//ou seja. a função criada fara o scroll exatamente para a seção do link
+
+function scrollToSection(event) {
+  event.preventDefault();
+}
+
+linksInternos.forEach((link) => {
+  link.addEventListener("click", scrollToSection);
+});
