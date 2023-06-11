@@ -17,9 +17,9 @@ function Carro(marcaAtribuida, precoAtribuido) {
 
 const honda = new Carro(); //quando colocada a palavra reservada new,a função retornará um objeto.A const então se trabsofma em um objeto. Caso contrário, tornará o undefinied
 //honda.teste = "oi";
-honda.andar = function () {
+/* honda.andar = function () {
   console.log("Andou");
-};
+}; */
 honda.marca = "honda";
 honda.preco = 0;
 
@@ -27,3 +27,20 @@ const fiat = new Carro();
 
 fiat.marca = "fiat";
 fiat.preco = 5000;
+
+const chevrolet = new Carro("chevrolet", 3000);
+
+//passamos entao os argumentos direto no objeto, pois foram definidos parametros na função construtora
+
+function Carro2(marca, precoInicial) {
+  this.taxa = 1.2;
+  const precoFinal = precoInicial * this.taxa;
+  console.log(this);
+  this.marca = marca;
+  console.log(this);
+  this.preco = precoFinal;
+  console.log(this);
+}
+
+const mazda = new Carro2("Mazda", 5000);
+//const porsche = new Carro2("Porsche", 7000);
