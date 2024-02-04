@@ -1,50 +1,24 @@
-console.log(Number.isNaN(NaN)); //true
-console.log(Number.isInteger(10)); //true
+const instrumentos = ['Guitarra', 'Baixo', 'Violão'];
+const precos = [49, 99, 69, 89];
 
-console.log(parseFloat('3234.343')); //transformara em numero
-console.log(parseFloat(3234, 343)); //corta oque vem depois da virgula
-console.log(parseFloat('aaa3234, 343')); //retorna nan
-console.log(parseInt('100,25 reais')); //se for charcater apos o numero ele consegue transforma em numero
+const dados = [
+  new String('Tipo 1'),
+  ['Carro', 'Portas', { cor: 'Azul', preco: 2000 }],
+  function andar(nome) {
+    console.log(nome);
+  },
+];
+const carros = new Array('Corola', 'Mustang', 'Honda');
+dados[2]('Ford');
+dados[1][2].cor; // azul
 
-console.log(parseInt('102.22 reais', 10)); //retorna 102
+carros[1]; //Mustang;
+carros[2] = 'Ferrari';
+carros[10] = 'Parati';
+carros.length; // 11
 
-Math.abs(-5.5); // 5.5
-Math.ceil(4.8334); // 5
-Math.ceil(4.3); // 5
-Math.floor(4.8334); // 4
-Math.floor(4.3); // 4
-Math.round(4.8334); // 5
-Math.round(4.3); // 4
+const li = document.querySelectorAll('li');
 
-// Retorne um número aleatório
-// entre 1050 e 2000
-
-const aleatorio = Math.floor(Math.random() * (2000 - 1050 + 1)) + 1050;
-
-console.log(aleatorio);
-
-// Retorne o maior número da lista abaixo
-const numeros = '4, 5, 20, 8, 9';
-
-const arrayNumeros = numeros.split(', ');
-const numeroMaximo = Math.max(...arrayNumeros);
-
-// Crie uma função para limpar os preços
-// e retornar os números com centavos arredondados
-// depois retorne a soma total
-const listaPrecos = ['R$ 59,99', ' R$ 100,222', 'R$ 230  ', 'r$  200'];
-
-function limparPreco(preco) {
-  preco = +preco.toUpperCase().replace('R$', '').trim().replace(',', '.');
-  preco = preco.toFixed(2);
-  return preco;
-}
-
-let soma = 0;
-listaPrecos.forEach((preco) => {
-  soma += limparPreco(preco);
-});
-console.log(
-  soma.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),
-);
-limparPreco(listaPrecos[1]);
+const arrayLi = Array.from(li);
+console.log(li);
+console.log(arrayLi);
